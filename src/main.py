@@ -68,9 +68,9 @@ def close_issue(num, repo, maxi):
 ### Sorry but You cannot have more than """
         + str(maxi)
         + """  issues open, kindly close or finish your current issues before you make a new one.
-### <br> if you feel the issue is Important please tag a maintainers. <br>
-### This action is being deployed to prevent spamming of Issues,      <br>
-If you are not spamming then You are doing great work Keep it up !!"""
+### <br> if you feel the issue is Important please tag a maintainer. <br>
+### This action is being deployed to prevent spamming of issues,      <br>
+If you are not spamming then you are doing a great work. Keep it up !!"""
     )
     issue.edit(state="closed")
     return
