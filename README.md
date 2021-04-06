@@ -61,7 +61,7 @@ Following command can be used to run the pre-commit:<br>
 If pre-commit is not installed in your system, it can be install with : <br> ```$ pip install pre-commit```
 ## Our Contributors
 
-[CONTRIBUTORS.md]()
+[CONTRIBUTORS.md](/CONTRIBUTORS.md)
 
 ## Code of Conduct
 
