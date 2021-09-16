@@ -64,7 +64,7 @@ def close_issue(num, repo, maxi):
     """
     issue = repo.get_issue(num)
     issue.create_comment(
-        """## STOP !! <br>        ![](https://pbs.twimg.com/media/EWQM1qRUEAAEVdh.jpg)<br>
+        """## STOP !! <br>        ![](https://raw.githubusercontent.com/Suvraneel/Issue_Watcher/main/img/Stop.png)<br>
 ### You cannot have more than """
         + str(maxi)
         + """  issues open, kindly close or finish your current issues before you make a new one.
