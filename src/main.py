@@ -64,11 +64,11 @@ def close_issue(num, repo, maxi):
     """
     issue = repo.get_issue(num)
     issue.create_comment(
-        """## STOMP !! <br>        ![](https://pbs.twimg.com/media/EWQM1qRUEAAEVdh.jpg)<br>
-### Sorry but You cannot have more than """
+        """## STOP !! <br>        ![](https://pbs.twimg.com/media/EWQM1qRUEAAEVdh.jpg)<br>
+### You cannot have more than """
         + str(maxi)
         + """  issues open, kindly close or finish your current issues before you make a new one.
-### <br> if you feel the issue is Important please tag a maintainer. <br>
+### <br> if you feel the issue is !important please tag a maintainer. <br>
 ### This action is being deployed to prevent spamming of issues,      <br>
 If you are not spamming then you are doing a great work. Keep it up !!"""
     )
