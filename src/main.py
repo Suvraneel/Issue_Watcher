@@ -82,7 +82,7 @@ repourl = os.environ["INPUT_REPO"]
 maxi = os.environ["INPUT_MAXISSUE"]
 
 if maxi is None:
-    maxim = 2
+    maxim = 3
 else:
 
     maxim = int("".join(c for c in maxi if c.isdigit()))
