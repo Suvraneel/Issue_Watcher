@@ -13,7 +13,7 @@ import github
 # load_dotenv(dotenv_path)
 
 
-def count_issues(author, token, repo):
+def count_issues(author, assignee, token, repo):
     """
     Count the number of open Issues created by a contributor of the project.
 
@@ -31,7 +31,7 @@ def count_issues(author, token, repo):
     return raw["total_count"]
 
 
-def get_latest_issue(author, token, repo):
+def get_latest_issue(author, assignee, token, repo):
     r"""
     Get the contributor's latest Open Issue.
 
