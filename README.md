@@ -7,6 +7,9 @@
 - Unassign assignee & remove labels instead of closing issues
 - Works best when combined with `JasonEtco/slash-assign-action`
 
+
+
+
 <p align="center">
 <img src="img/White and Green Gaming Badge Logo.png" height = "400px">
 </p> <br>
