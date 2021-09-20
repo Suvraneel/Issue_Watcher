@@ -2,7 +2,7 @@ certifi==2020.12.5
 chardet==4.0.0
 Deprecated==1.2.12
 idna==2.10
-PyGithub==1.54.1
+PyGithub==1.55
 pre-commit
 PyJWT==1.7.1
 python-dotenv==0.15.0
