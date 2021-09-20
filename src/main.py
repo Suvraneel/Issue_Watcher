@@ -18,6 +18,7 @@ def count_issues(author, token, repo):
     Count the number of open Issues created by a contributor of the project.
 
     author : Github id of the contributor
+    assignee : Github id of the assigned contributor
     token : Github Token
     repo : Reository for which we are retriving the count
     """
