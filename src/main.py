@@ -13,7 +13,7 @@ import github
 # load_dotenv(dotenv_path)
 
 
-def count_issues(author, assignee, token, repo):
+def count_issues(author, token, repo):
     """
     Count the number of open Issues created by a contributor of the project.
 
@@ -22,7 +22,7 @@ def count_issues(author, assignee, token, repo):
     token : Github Token
     repo : Reository for which we are retriving the count
     """
-    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{repo}+assignee:{assignee}+is:open"
+    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{repo}+assignee:{author}+is:open"
 
     headers = {"Authorization": f"token {token}"}
 
@@ -31,7 +31,7 @@ def count_issues(author, assignee, token, repo):
     return raw["total_count"]
 
 
-def get_latest_issue(author, assignee, token, repo):
+def get_latest_issue(author, token, repo):
     r"""
     Get the contributor's latest Open Issue.
 
@@ -40,7 +40,7 @@ def get_latest_issue(author, assignee, token, repo):
     token : Github Token
     repo : Reository for which we are retriving the count
     """
-    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{repo}+assignee:{assignee}+is:open"
+    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{repo}+assignee:{author}+is:open"
 
     headers = {"Authorization": f"token {token}"}
 
