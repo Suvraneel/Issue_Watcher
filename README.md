@@ -1,3 +1,11 @@
+### Inspired by TesseractCoding/Issue_Watcher
+#### Attributions for original action:     @anushkrishnav     @ricardoprins
+#### Modded & tailored by @Suvraneel =>
+# Changelog :
+- Triggers on /assign not on creation of Issue & PRs
+- acts on assignees[] and not on author
+- Unassign assignee & remove labels instead of closing issues
+
 <p align="center">
 <img src="img/White and Green Gaming Badge Logo.png" height = "400px">
 </p> <br>
