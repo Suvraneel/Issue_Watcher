@@ -72,7 +72,9 @@ def reassign_issue(num, repo, maxi):
     )
     issue.edit(assignees=[])
     labels_temp = get_labels()
+    print(labels_temp)
     labels_temp.remove("Assigned")
+    print(labels_temp)
     issue.edit(labels=labels_temp)
     return
 
