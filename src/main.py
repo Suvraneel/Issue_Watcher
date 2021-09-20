@@ -68,10 +68,10 @@ def reassign_issue(num, repo, maxi):
     issue.create_comment(
         """The assigned contributor has more than """
         + str(maxi)
-        + """open issues, kindly reassign manually (@Supervisors/Mentors)"""
+        + """ open issues, kindly reassign manually (@Supervisors/Mentors)"""
     )
     issue.edit(assignees=[])
-    issue.edit(labels="Reassign manually")
+    issue.edit(labels=[])
     return
 
 
