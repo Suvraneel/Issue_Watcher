@@ -2,9 +2,10 @@
 #### Attributions for original action:     @anushkrishnav     @ricardoprins
 #### Modded & tailored by @Suvraneel =>
 # Changelog :
-- Triggers on /assign not on creation of Issue & PRs
+- Triggers on `/assign` not on creation of Issue & PRs
 - acts on assignees[] and not on author
 - Unassign assignee & remove labels instead of closing issues
+- Works best when combined with JasonEtco's slash-assign action
 
 <p align="center">
 <img src="img/White and Green Gaming Badge Logo.png" height = "400px">
