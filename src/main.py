@@ -21,7 +21,7 @@ def count_issues(author, token, repo):
     token : Github Token
     repo : Reository for which we are retriving the count
     """
-    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{repo}+author:{author}+is:open"
+    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{repo}+assignee:{assignee}+is:open"
 
     headers = {"Authorization": f"token {token}"}
 
@@ -69,7 +69,8 @@ def reassign_issue(num, repo, maxi):
         + str(maxi)
         + """open issues, kindly reassign manually (@Supervisors/Mentors)"""
     )
-    issue.edit(labels="Reassign")
+    issue.edit(assignees=[])
+    issue.edit(labels="Reassign manually")
     return
 
 
