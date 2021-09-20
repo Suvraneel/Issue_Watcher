@@ -34,11 +34,12 @@ def get_latest_issue(author, token, repo):
     r"""
     Get the contributor's latest Open Issue.
 
-    author : Github id of the contributor
+    author : Github id of the author of issue
+    assignee : Github id of the assigned contributor
     token : Github Token
     repo : Reository for which we are retriving the count
     """
-    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{repo}+author:{author}+is:open"
+    query_url = f"https://api.github.com/search/issues?q=is:issue+repo:{repo}+assignee:{assignee}+is:open"
 
     headers = {"Authorization": f"token {token}"}
 
@@ -54,7 +55,7 @@ def get_latest_issue(author, token, repo):
     return k["number"]
 
 
-def close_issue(num, repo, maxi):
+def reassign_issue(num, repo, maxi):
     r"""
     Close the issue and add a comment to the issue stating the reason.
 
@@ -64,15 +65,11 @@ def close_issue(num, repo, maxi):
     """
     issue = repo.get_issue(num)
     issue.create_comment(
-        """## STOP !! <br>        ![](https://raw.githubusercontent.com/Suvraneel/Issue_Watcher/main/img/Stop.png)<br>
-### You cannot have more than """
+        """The assigned contributor has more than """
         + str(maxi)
-        + """  issues open, kindly close or finish your current issues before you make a new one.
-### <br> if you feel the issue is !important please tag the mentor of your batch. <br>
-### This action is being deployed to prevent spamming of issues,      <br>
-If you are not spamming then you are doing a great work. Keep it up !!"""
+        + """open issues, kindly reassign manually (@Supervisors/Mentors)"""
     )
-    issue.edit(state="closed")
+    issue.edit(labels="Reassign")
     return
 
 
@@ -95,4 +92,4 @@ count = count_issues(author=author, token=token, repo=repourl)
 numb = get_latest_issue(author=author, token=token, repo=repourl)
 if numb is not None:
     if count >= maxim + 1:
-        close_issue(numb, repo, maxim)
+        reassign_issue(numb, repo, maxim)
