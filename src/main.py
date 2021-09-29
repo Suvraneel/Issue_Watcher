@@ -71,7 +71,7 @@ def reassign_issue(num, repo, maxi):
         + """ open issues, kindly reassign manually (@Supervisors/Mentors)"""
     )
     issue.edit(assignees=[])   ##  clear all assignees
-    issue.edit(labels=[])      ## clear all labels
+#     issue.edit(labels=[])      ## clear all labels
     return
 
 
